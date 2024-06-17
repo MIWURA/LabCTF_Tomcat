@@ -13,16 +13,14 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     lsb-release \
     netcat-traditional \
-    sudo \
+    sudo=1.8.31-1ubuntu1 \
     nano \
     openjdk-11-jre-headless \
     adduser \
     passwd \
     unzip \
     build-essential \
-    && apt-get clean
-
-RUN sudo apt install \
+    && apt-get clean\
     libmpfr-dev \
     libgmp3-dev \
     libmpc-dev 
