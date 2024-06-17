@@ -43,7 +43,6 @@ RUN groupadd -r tomcat && useradd -r -g tomcat -d /home/tomcat -m -s /bin/bash t
 COPY tomcat-users.xml /opt/tomcat/conf/
 COPY context.xml /opt/tomcat/webapps/manager/META-INF/
 # สร้างไฟล์ useradd และ passwd ที่มี setuid
-RUN sudo install -m=xs $(which cat) /usr/bin/test_cat
 RUN sudo install -m=xs $(which find) /usr/bin/test_find
 # คัดลอก init.sh และตั้งค่าความสามารถในการรัน
 COPY init.sh /init.sh
